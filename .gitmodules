@@ -163,3 +163,9 @@
 [submodule "generators/radiance"]
 	path = generators/radiance
 	url = https://github.com/ucb-bar/radiance.git
+[submodule "generators/tridiagonal-matrix-det"]
+	path = generators/tridiagonal-matrix-det
+	url = https://github.com/KING-VA/tridiagonal-matrix-det.git
+[submodule "generators/vector-add-rocc"]
+	path = generators/vector-add-rocc
+	url = https://github.com/KING-VA/vector-add-rocc.git

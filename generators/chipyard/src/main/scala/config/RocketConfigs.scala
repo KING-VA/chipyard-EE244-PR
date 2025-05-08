@@ -8,6 +8,26 @@ import freechips.rocketchip.subsystem.{InCluster}
 // Rocket Configs
 // --------------
 
+
+class VectorAddTriDiagMatDetRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new vector_add_rocc.WithVecAddRoCC ++
+  new TriDiagMatDet.WithTriDiagDet ++
+  new freechips.rocketchip.rocket.WithNHugeCores(1) ++         // single rocket-core
+  new chipyard.config.AbstractConfig)
+
+class VectorAddRoCCRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new vector_add_rocc.WithVecAddRoCC ++
+  new freechips.rocketchip.rocket.WithNHugeCores(1) ++         // single rocket-core
+  new chipyard.config.AbstractConfig)
+
+class TriDiagMatDetRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++
+  new TriDiagMatDet.WithTriDiagDet ++
+  new freechips.rocketchip.rocket.WithNHugeCores(1) ++         // single rocket-core
+  new chipyard.config.AbstractConfig)
+
 class RocketConfig extends Config(
   new freechips.rocketchip.rocket.WithNHugeCores(1) ++         // single rocket-core
   new chipyard.config.AbstractConfig)
